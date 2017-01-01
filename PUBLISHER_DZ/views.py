@@ -1,6 +1,11 @@
 from django.shortcuts import render
-
+#from django.views import generic 
+from .models import Post
 # Create your views here.
 
-def home(request):
-	return render(request,'home.html',{})
+def get_list(request):
+	return Post.objects.all() 	
+def view(request):
+	return render(request,"home.html",{})
+
+
