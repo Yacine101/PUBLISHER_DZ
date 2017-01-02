@@ -9,7 +9,7 @@ class Post(models.Model):
 	creation_date=models.DateTimeField(default=timezone.now)
 	image_url=models.CharField(max_length=100)
 
-	def handleit(self):
+	def handle_post(self):
 		self.creation_date=timezone.now()
 		self.save
 	

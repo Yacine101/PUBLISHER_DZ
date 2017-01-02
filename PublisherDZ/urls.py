@@ -20,4 +20,5 @@ from PUBLISHER_DZ import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', views.Home.as_view() , name="home"),
+    url(r'^add/', views.Home.post_add , name="add"),
 ]

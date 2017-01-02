@@ -4,11 +4,16 @@ from .models import Post
 # Create your views here.
 
 class Home(generic.ListView):
+	
+	template_name="PUBLISHER_DZ/home.html"	
 
 	def get_queryset(self):
 		return Post.objects.all() 	
 
-	def view(self,request):
-		return render(request,"home.html",{})
+	def post_add(self,request):
+		p = Post();
+		p.description=request.POST['inputData']		
+		p.handle_post()
+#		return render(request,"home.html",{})
 
 

@@ -1,12 +1,18 @@
 <html>
 <head>
 <title>
-test
+Home
 </title>
 </head>
 
 <body>
-test
+
+<form method="post" target="add" action="add">
+{% csrf_token %}
+<input type="text" name="inputData" id="inputData"/>
+<input type="submit" name="submit" id="submit"/>
+</form>
+
 </body>
 </html>
 
