@@ -1,5 +1,5 @@
 """PublisherDZ URL Configuration
-
+ss
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.9/topics/http/urls/
 Examples:
@@ -20,5 +20,5 @@ from PUBLISHER_DZ import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', views.Home.as_view() , name="home"),
-    url(r'^add/', views.Home.post_add , name="add"),
+    url(r'^add/', views.Add.as_view() , name="add"),
 ]

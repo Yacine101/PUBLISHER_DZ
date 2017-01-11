@@ -8,7 +8,7 @@ class Post(models.Model):
 	location=models.CharField(max_length=20)
 	creation_date=models.DateTimeField(default=timezone.now)
 	image_url=models.CharField(max_length=100)
-        keywords=models.CharField(max_length=100)
+        keyworks=models.CharField(max_length=100)
 
 	def handle_post(self):
 		self.creation_date=timezone.now()

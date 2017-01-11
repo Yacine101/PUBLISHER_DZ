@@ -10,10 +10,19 @@ class Home(generic.ListView):
 	def get_queryset(self):
 		return Post.objects.all() 	
 
-	def post_add(self,request):
-		p = Post();
-		p.description=request.POST['inputData']		
-		p.handle_post()
+#	@api_view(['POST'])
+	
+class Add(generic.edit.UpdateView):
+    	
+	model = Post
+   	success_url = '/add'
+    	fields = '__all__'
+	
+#	def post_add(self,request):
+#		p = Post();
+		#p.description=request.POST['inputData']		
+#		p.description="Yacine"
+#		p.handle_post()
 #		return render(request,"home.html",{})
 
 
