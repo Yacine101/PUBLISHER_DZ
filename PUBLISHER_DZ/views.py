@@ -15,8 +15,10 @@ class Home(generic.ListView):
 class Add(generic.edit.CreateView):
    	template_name="PUBLISHER_DZ/home.html"
 	model = Post
-   	success_url = '/'
-    	fields = '__all__'
+   	success_url = '/success'
+    	fields = ['description']
+#	fields = '__all__'
+
 	
 #	def post_add(self,request):
 #		p = Post();
