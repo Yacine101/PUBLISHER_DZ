@@ -12,11 +12,11 @@ class Home(generic.ListView):
 
 #	@api_view(['POST'])
 	
-#class Add(generic.edit.UpdateView):
-#   	template_name="PUBLISHER_DZ/add.html"
-#	model = Post
-#   	success_url = '/adde'
-#    	fields = '__all__'
+class Add(generic.edit.CreateView):
+   	template_name="PUBLISHER_DZ/home.html"
+	model = Post
+   	success_url = '/'
+    	fields = '__all__'
 	
 #	def post_add(self,request):
 #		p = Post();
