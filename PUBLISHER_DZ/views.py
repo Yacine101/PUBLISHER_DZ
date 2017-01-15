@@ -28,3 +28,6 @@ class Add(generic.edit.CreateView):
 #		return render(request,"home.html",{})
 
 
+def success(request):
+	return render(request,"PUBLISHER_DZ/success.html",{})
+	
