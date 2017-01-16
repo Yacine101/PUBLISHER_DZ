@@ -6,26 +6,16 @@ from .models import Post
 class Home(generic.ListView):
 	
 	template_name="PUBLISHER_DZ/home.html"	
+	context_object_name = "posts"
 
 	def get_queryset(self):
-		return Post.objects.all() 	
-
-#	@api_view(['POST'])
+		return Post.objects.all() 
 	
 class Add(generic.edit.CreateView):
-   	template_name="PUBLISHER_DZ/home.html"
+   	template_name="PUBLISHER_DZ/add.html"
 	model = Post
    	success_url = '/success'
     	fields = ['description']
-#	fields = '__all__'
-
-	
-#	def post_add(self,request):
-#		p = Post();
-		#p.description=request.POST['inputData']		
-#		p.description="Yacine"
-#		p.handle_post()
-#		return render(request,"home.html",{})
 
 
 def success(request):
