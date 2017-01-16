@@ -18,6 +18,7 @@ class Add(generic.edit.CreateView):
     	fields = ['description','location','keywords']
 
 
+
 def success(request):
 	return render(request,"PUBLISHER_DZ/success.html",{})
 	
