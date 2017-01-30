@@ -16,8 +16,10 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from PUBLISHER_DZ import views
-
+from django.http import HttpResponseRedirect
 urlpatterns = [
+#    url(r'^$', 'django.views.generic.simple.redirect_to', {'url': '/home/'}),
+    url(r'^$', lambda r: HttpResponseRedirect('home/')),
     url(r'^admin/', admin.site.urls),
     url(r'^add/', views.Add.as_view() , name="add"),
     url(r'^home/', views.Home.as_view() , name="home"),

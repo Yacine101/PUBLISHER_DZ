@@ -3,12 +3,16 @@
 <title>
 Home template
 </title>
+<style>
+body{
+background-color:grey;
+}
+</style>
 </head>
-
 <body>
 
 {% for i in posts %}
-<div name="post" style="border:1px solid red;">
+<div name="post" style="border:1px solid orange;text-align:center;width:60%;margin:auto">
 <div name="description"><h3>{{i.description}}</h3></div>
 <div name="location">in {{i.location}}</div>
 <div name="keywords"><h6>{{i.keywords}}</h6></div>
