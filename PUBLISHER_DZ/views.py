@@ -9,7 +9,7 @@ class Home(generic.ListView):
 	context_object_name = "posts"
 
 	def get_queryset(self):
-		return Post.objects.all() 
+		return Post.objects.all().order_by('-id') 
 	
 class Add(generic.edit.CreateView):
    	template_name="PUBLISHER_DZ/add.html"
