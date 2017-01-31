@@ -7,10 +7,15 @@ Home template
 body{
 background-color:grey;
 }
+
 </style>
 </head>
 <body>
-
+<header>
+<ul>
+<li><a href="/add">Add post</a></li>
+</ul>
+</header>
 {% for i in posts %}
 <div name="post" style="border:1px solid orange;text-align:center;width:60%;margin:auto">
 <div name="description"><h3>{{i.description}}</h3></div>
