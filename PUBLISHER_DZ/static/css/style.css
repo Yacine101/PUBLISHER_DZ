@@ -1,0 +1,12 @@
+body{
+background-color:grey;
+}
+
+.post {
+
+border:1px solid orange;
+text-align:center;
+width:60%;
+margin:auto;
+}
+

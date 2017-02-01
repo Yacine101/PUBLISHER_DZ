@@ -3,12 +3,8 @@
 <title>
 Home template
 </title>
-<style>
-body{
-background-color:grey;
-}
-
-</style>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
 </head>
 <body>
 <header>
@@ -17,10 +13,10 @@ background-color:grey;
 </ul>
 </header>
 {% for i in posts %}
-<div name="post" style="border:1px solid orange;text-align:center;width:60%;margin:auto">
-<div name="description"><h3>{{i.description}}</h3></div>
-<div name="location">in {{i.location}}</div>
-<div name="keywords"><h6>{{i.keywords}}</h6></div>
+<div class="post">
+<div class="description"><h3>{{i.description}}</h3></div>
+<div class="location">in {{i.location}}</div>
+<div class="keywords"><h6>{{i.keywords}}</h6></div>
 </div>
 {% endfor %}
 </body>
