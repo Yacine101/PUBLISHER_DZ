@@ -12,6 +12,7 @@ Home template
 <li><a href="/add">Add post</a></li>
 </ul>
 </header>
+<div class="postShow">
 {% for i in posts %}
 <div class="post">
 <div class="description"><h3>{{i.description}}</h3></div>
@@ -19,6 +20,7 @@ Home template
 <div class="keywords"><h6>{{i.keywords}}</h6></div>
 </div>
 {% endfor %}
+</div>
 </body>
 </html>
 

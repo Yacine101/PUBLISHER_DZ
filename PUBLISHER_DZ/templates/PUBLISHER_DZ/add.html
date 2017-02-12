@@ -19,8 +19,8 @@ Add a new post
 <form method="post" target="" action="">
 {% csrf_token %}
 
-Describe the POST </br> <textarea name="description" id="description" placeholder="Describe your POST" cols="50" rows="5" > </textarea></br>
-Your location <input type="textarea" name="location" id="location"/> </br>
+Describe the POST </br> <textarea name="description" id="description" placeholder="Describe your POST" cols="50" rows="20" > </textarea></br>
+Your location <input type="text" name="location" id="location"/> </br>
 <input type="submit" name="submit" id="submit"/>
 </form>
 

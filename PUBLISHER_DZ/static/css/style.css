@@ -2,6 +2,12 @@ body{
 background-color:grey;
 }
 
+header {
+margin:auto;
+width:50%;
+
+}
+
 .post {
 
 border:1px solid orange;
@@ -10,3 +16,14 @@ width:60%;
 margin:auto;
 }
 
+.postArea {
+
+width: 50%;
+margin: auto;
+margin-top:10%;
+
+}
+
+.postShow {
+margin-top:10%;
+}
