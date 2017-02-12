@@ -23,5 +23,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^add/', views.Add.as_view() , name="add"),
     url(r'^home/', views.Home.as_view() , name="home"),
+    url(r'^featured/', views.Featured.as_view() , name="featured"),
     url(r'^success/', views.success , name="success")
 ]

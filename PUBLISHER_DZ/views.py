@@ -18,6 +18,13 @@ class Add(generic.edit.CreateView):
     	fields = ['description','location']
 
 
+class Featured(generic.ListView):
+
+        template_name="PUBLISHER_DZ/featured.html"
+#        context_object_name = "posts"
+
+        def get_queryset(self):
+                return ""
 
 def success(request):
 	return render(request,"PUBLISHER_DZ/success.html",{})

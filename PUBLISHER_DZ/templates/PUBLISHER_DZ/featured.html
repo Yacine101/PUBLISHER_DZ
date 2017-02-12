@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 <title>
-Home template
+Featured posts
 </title>
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
@@ -14,14 +14,12 @@ Home template
 <li><a href="/featured">Featured</a></li>
 </ul>
 </header>
-<div class="postShow">
-{% for i in posts %}
+<div class="postShow" style="text-align:center;">
+Featueed Posts
 <div class="post">
-<div class="description"><h3>{{i.description}}</h3></div>
-<div class="location">in {{i.location}}</div>
-<div class="keywords"><h6>{{i.keywords}}</h6></div>
+<div class="description"><h3>Make your Post featured</h3></div>
+<div class="location"></div>
 </div>
-{% endfor %}
 </div>
 </body>
 </html>
