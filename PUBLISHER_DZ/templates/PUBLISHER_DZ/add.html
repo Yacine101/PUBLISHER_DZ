@@ -14,14 +14,17 @@ Add a new post
 </ul>
 </header>
 
+<div class="postArea">
+
 <form method="post" target="" action="">
 {% csrf_token %}
-<!-- <input type="text" name="author" id="author"/> -->
-Describe of the POST <input type="text" name="description" id="description"/></br>
-Your actual location <input type="text" name="location" id="location"/>
-Add keywords <input type="text" name="keywords" id="keywords"/></br>
+
+Describe the POST </br> <textarea name="description" id="description" placeholder="Describe your POST" cols="50" rows="5" > </textarea></br>
+Your location <input type="textarea" name="location" id="location"/> </br>
 <input type="submit" name="submit" id="submit"/>
 </form>
+
+</div>
 
 </body>
 </html>
