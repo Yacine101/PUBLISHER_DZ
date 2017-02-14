@@ -10,6 +10,16 @@ class Home(generic.ListView):
 
 	def get_queryset(self):
 		return Post.objects.all().order_by('-id') 
+
+
+class Specific(generic.ListView):
+
+        template_name="PUBLISHER_DZ/specific.html"
+        context_object_name = "post"
+
+        def get_queryset(self, **kwargs):
+                return Post.objects.get(id=self.kwargs['post_id'])
+
 	
 class Add(generic.edit.CreateView):
    	template_name="PUBLISHER_DZ/add.html"

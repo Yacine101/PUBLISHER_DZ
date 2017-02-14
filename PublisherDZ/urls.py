@@ -24,5 +24,6 @@ urlpatterns = [
     url(r'^add/', views.Add.as_view() , name="add"),
     url(r'^home/', views.Home.as_view() , name="home"),
     url(r'^featured/', views.Featured.as_view() , name="featured"),
+    url(r'^sales/(?P<post_id>[0-9])/$', views.Specific.as_view() , name="sales"),
     url(r'^success/', views.success , name="success")
 ]
