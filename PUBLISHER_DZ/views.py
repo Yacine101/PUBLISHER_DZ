@@ -15,7 +15,7 @@ class Add(generic.edit.CreateView):
    	template_name="PUBLISHER_DZ/add.html"
 	model = Post
    	success_url = '/home'
-    	fields = ['description','location']
+    	fields = ['description','phone','e_mail','location']
 
 
 class Featured(generic.ListView):
