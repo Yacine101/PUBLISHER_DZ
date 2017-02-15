@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views import generic 
+from django.core.urlresolvers import reverse
 from .models import Post
 # Create your views here.
 
@@ -24,9 +25,13 @@ class Specific(generic.ListView):
 class Add(generic.edit.CreateView):
    	template_name="PUBLISHER_DZ/add.html"
 	model = Post
-   	success_url = '/home'
-    	fields = ['description','phone','e_mail','location']
+#   	success_url='sales/'+Post.id+'/'
+	success_url="/sales/%(id)s/"
+    	fields = ['description','price','phone','e_mail','location']
 
+#	def get_success_url(self, **kwargs):         
+#            return reverse_lazy('sales', args = (self.object.id,post_id))
+#	    return reverse('sales', args=(self.object.id,))
 
 class Featured(generic.ListView):
 
